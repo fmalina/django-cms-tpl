@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load i18n cms_tags sekizai_tags %}
+{% block title %}{% if cert.compliant %}✔{% else %}✘{% endif %}
+    {{ cert.name }} ({{ cert.domain }}) - {% trans "Health website certificate of compliance" %}{% endblock %}
+{% block content %}
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>{{ cert.name }}: {% trans "Certificate of compliance" %}<br>
+                    <small>{% trans "with the Code of Conduct HONcode for health online information" %}</small></h1>
+                
+                <div class="media">
+                    <div class="media-object pull-left">
+                        {% if cert.compliant %}
+                            <span class="glyphicon glyphicon-ok"></span>
+                        {% else %}
+                            <span class="glyphicon glyphicon-remove"></span>
+                        {% endif %}
+                    </div>
+                    <div class="media-body lead">
+                        <b class="media-heading">{{ cert.name }}</b>
+                        <small><a target="_blank" href="{{ cert.link }}">{{ cert.link }}</a></small><br>
+                        {% if cert.compliant %}
+                            {% trans "is in compliance with the HONcode" %}
+                        {% else %}
+                            {% trans "is currently not checked for compliance with the HONcode" %}
+                        {% endif %}
+                        {% if cert.compliant %}<br>
+                            <a href="/HONcode/Webmasters/StepByStep/StepByStep3.html"
+                                title="{% trans "systematic reevaluation by HON every year"}">
+                                {% trans "Validity of certificate" %}:</a>
+                                <span>{{ cert.date_valid_from }} - {{ cert.date_valid_until }}</span>
+                        {% endif %}
+                    </div>
+                </div><!-- / media -->
+            </div><!-- / column -->
+            <div class="col-md-4">
+                {% include 'button-nav.html' %}
+            </div><!-- / column -->
+        </div><!-- / row -->
+    </div><!-- / container -->
+</div><!-- / jumbotron -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <ul>
+                <li>{% trans "HONcode PIN number" %}:
+                    <b>{{ cert.pin }}</b>
+                <li>{% trans "Date of initial review" %}:
+                    {{ cert.date_init_review }}
+                <li>{% trans "Date of last visit" %}:
+                    {{ cert.date_last_visit }}
+                <li><a class="menulight" href="/HONcode/Webmasters/StepByStep/StepByStep3.html"
+                    title="{% trans "systematic reevaluation by HON every year" %}">
+                    {% trans "Validity of certificate" %}</a>:
+                    <b>{{ cert.date_valid_from }} - {{ cert.date_valid_until }}</b>
+                <li><a href="{{ cert.link }}" target="_blank">{% trans "Show the HONcode seal on this site" %}
+                    <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </ul>
+            
+            <hr>
+            
+            <p>{% blocktrans %}You will find below the elements identified by the HONcode team
+                at a precise date to justify the <b>respect of the 8 ethical principles</b>.{% endblocktrans %}</p>
+            
+            <div class="panel-group" id="accordion">
+                {% regroup cert.proof_set.all by get_princip_display as principles %}
+                {% for principle in principles %}
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ forloop.counter }}">
+                                <span class="glyphicon glyphicon-plus"></span>
+                                {{ principle.grouper }}</a>
+                        </h3>
+                    </div>
+                    <div id="collapse{{ forloop.counter }}" class="panel-collapse collapse{% if forloop.first %} in{% endif %}">
+                        <div class="panel-body">
+                            {% for proof in principle.list %}
+                                <p>{{ proof.desc|linebreaksbr }}
+                                    <span class="text-muted">{{ proof.date }}</span> -
+                                    <a href="{{ proof.link }}" target="_blank">{% trans "Link" %}</a></p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+            </div><!--/panel-group-->
+            
+            <p>{% blocktrans %}The content of this certificate has been collected and written by the
+                Health On the Net Foundation (HON) and should not be used without previous permission granted by HON.<br>
+                A request for permission can be sent to:{% endblocktrans %}
+                <a href="http://services.hon.ch/Contact/contact.pl">HON</a>
+            
+            <p><a class="btn btn-warning btn-lg"
+                href="http://services.hon.ch/Contact/contact.pl?honconduct=HONConduct836479">
+                <span class="glyphicon glyphicon-flag"></span>
+                {% trans "Report a complaint" %}</a>
+        </div><!-- end 1st column -->
+        
+        <div class="col-md-4">
+            {% static_placeholder "honcode-significance" django_language %}
+            <p><a class="btn btn-info btn-lg" href="http://www.hon.ch/HONcode/Patients/Visitor/visitor.html">
+                {% trans "More information" %}</a></p>
+        </div><!-- end 2nd column -->
+    </div>
+</div>
+{% endblock %}

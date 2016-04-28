@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags %}
+
+{% block title %}{% page_attribute 'title' %}{% endblock title %}
+
+{% block content %}
+
+<div class="jumbotron">
+<div class="container">
+    <div class="services row">
+        <div class="col-md-3">
+        <span class="glyphicon glyphicon-certificate"></span>
+        {% placeholder "home-code" %}
+        <ul>{% show_menu_below_id "code" %}</ul>
+        </div>
+        
+        <div class="col-md-3">
+        <span class="glyphicon glyphicon-search"></span>
+        {% placeholder "home-search" %}
+        <ul>{% show_menu_below_id "search" %}</ul>
+        </div>
+        
+        <div class="col-md-3">
+        <span class="glyphicon glyphicon-wrench"></span>
+        {% placeholder "home-tools" %}
+        <ul>{% show_menu_below_id "tools" %}</ul>
+        </div>
+         
+        <div class="col-md-3">
+        <span class="glyphicon glyphicon-list"></span>
+        {% placeholder "home-topics" %}
+        <ul>{% show_menu_below_id "topics" %}</ul>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container">
+    {% placeholder "content" %}
+</div>
+    
+{% endblock content %}

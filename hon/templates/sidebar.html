@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags %}
+
+{% block title %}{% page_attribute 'title' %}{% endblock title %}
+
+{% block content %}
+<div class="jumbotron">
+<div class="container">
+    <div class="row">
+        <div class="sidenav col-md-3">
+            {% include 'button-nav.html' %}
+        </div>
+        <div class="col-md-9">
+            <h1>{% page_attribute 'title' %}</h1>
+            {% placeholder 'intro' %}
+        </div>
+    </div>
+</div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="sidenav col-md-3">
+            {% placeholder "sidebar" %}
+            <ul class="nav">
+            {% show_menu 0 100 100 100 %}
+            </ul>
+            <hr>
+        </div>
+        <div class="col-md-9">
+            {% placeholder "content" %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

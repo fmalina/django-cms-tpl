@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8">
+    <title>Logo alternative</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    @import url(http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css);
+
+    a{color:navy}
+    .navbar-static-top{border-bottom:1px solid #ddd}
+    
+    .logo-abbr{font-size:34px;font-weight:bold}
+    .logo-long{line-height:12px;padding:0 7px;text-transform:uppercase}
+    .logo-long,.logo img{position:relative;top:-4px}
+    .logo div{display:block;float:left}
+    .logo b,
+    .logo i{font-size:12px}
+    .logo i{color:#888;font-style:normal}
+    
+    .nav .dropdown a:hover, .nav .open>a{background:none}
+    .nav .dropdown-menu{min-width:40px}
+    .nav .glyphicon-globe{font-size:1.5em}
+    .tooltip .tooltip-inner{background-color:navy}
+    .tooltip.right .tooltip-arrow{border-right-color:navy}
+
+
+    footer .nav{padding-bottom:2em}
+    footer p{padding-top:10px}
+    </style>
+    <!-- IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<header class="navbar-static-top">
+    <div class="container">
+        <a class="logo navbar-brand" href="./"
+                data-toggle="tooltip" data-placement="right"
+                title="Health information you can trust">
+            <div class="logo-abbr">HON</div>
+            <div class="logo-long">
+                <b>Health on the Net</b><br>
+                <i>Foundation</i>
+            </div>
+            <img src="http://healthonthenet.org/static/img/HON-symbol.png" alt="">
+        </a>
+        <div class="navbar-right">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="select language">
+                    <span class="glyphicon glyphicon-globe"></span>
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                <li><a href="#" class="disabled">EN</a>
+                    <li><a href="/fr/" title="Fran&ccedil;ais">FR</a>
+                    <li><a href="/de/" title="Deutsch">DE</a>
+                    <li><a href="/es/" title="Espa&ntilde;ol">SP</a>
+                    <li><a href="/cn/" title="Chinese">CN</a>
+                </ul>
+            </li>
+        </ul>
+        
+        <form class="navbar-form navbar-right" role="search"
+            action="http://www.hon.ch/HONcode/Search/search.html">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control"
+                    placeholder="Search certified sites">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" name="sa">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+            
+            <input type="hidden" name="cref" value="http://www.hon.ch/CSE/HONCODE/contextlink.xml">
+            <input type="hidden" name="hl" value="en">
+            <input type="hidden" name="cof" value="FORID:11">
+        </form>
+        </div>
+    </div>
+</header>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>$(function(){ $('.navbar-brand').tooltip(); });</script>
+    </body>
+    </html>

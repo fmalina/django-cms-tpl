@@ -1,0 +1,58 @@
+@import url(//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css);
+
+a{color:navy}
+.navbar-static-top{border-bottom:1px solid #ddd;min-height:60px}
+.navbar-static-top .navbar-form{padding:10px 15px}
+.navbar-static-top .navbar-nav>li>a{padding-top:22px;padding-bottom:22px}
+
+.logo-abbr{font-size:40px;font-weight:bold}
+.logo-long{line-height:15px;font-size:15px;padding:0 7px;text-transform:uppercase}
+.logo div,.logo img{position:relative}
+.logo-abbr{top:8px}
+.logo-long{top:2px}
+.logo img{top:-4px}
+.logo div{display:block;float:left}
+.logo:hover{color:navy}
+.logo i{color:#888;font-style:normal}
+
+.colorbar{background:navy;color:white;padding-bottom:15px}
+.lift-colorbar{padding-top:20px}
+
+.nav .dropdown a:hover, .nav .open>a{background:none}
+.nav .dropdown-menu{min-width:40px;text-transform:uppercase}
+.nav .glyphicon-globe{font-size:1.5em}
+.jumbotron h1{font-size:2.5em}
+.jumbotron{background-color:navy;color:white}
+.jumbotron small,
+.jumbotron a{color:white}
+.jumbotron a{text-decoration:underline}
+.jumbotron .list-group a{color:#333;text-decoration:none}
+.jumbotron .list-group a:hover{color:navy}
+
+.tooltip .tooltip-inner{background-color:navy}
+.tooltip.right .tooltip-arrow{border-right-color:navy}
+
+.jobrole-nav,
+.sidenav,
+.donate{padding-top:20px}
+
+.media-body a{color:#ccc}
+
+.services .glyphicon{margin-left:30px}
+.services h2{text-align:left}
+.services p{text-align:left;max-width:220px}
+
+.services .glyphicon{font-size:5em}
+.jumbotron .media-object .glyphicon{font-size:5em;padding-right:.5em}
+.jumbotron .media-object .glyphicon-ok{color:green}
+.jumbotron .media-object .glyphicon-remove{color:red}
+
+.panel-title .glyphicon{color:#ddd}
+
+footer .nav{padding-bottom:2em}
+footer .nav-pills .active a,
+footer .nav-pills .active a:hover{cursor:default;background:none;color:navy;font-weight:bold}
+footer p{padding-top:10px}
+footer .copy{text-align:right}
+footer .copy a{text-decoration:none;color:gray}
+footer .copy a:hover{text-decoration:underline;color:#bbb}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content-wrapper %}
+<div class="container">
+    <h1>{% block title %}{% endblock %}</h1>
+    {% block content %}{% endblock %}
+</div>
+{% endblock %}
+{% block js %}
+    <script>
+    $(function(){
+        $('.auth .form-group input').addClass('form-control');
+        $('.auth p').addClass('form-group');
+    });
+    </script>
+{% endblock %}

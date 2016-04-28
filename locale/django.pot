@@ -1,0 +1,372 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-07 13:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: hon/settings.py:105 hon/settings.py:123
+msgid "en"
+msgstr ""
+
+#: hon/settings.py:106 hon/settings.py:137
+msgid "de"
+msgstr ""
+
+#: hon/settings.py:107 hon/settings.py:130
+msgid "fr"
+msgstr ""
+
+#: hon/settings.py:108 hon/settings.py:144
+msgid "es"
+msgstr ""
+
+#: hon/cert/templates/button-nav.html:5
+msgid "Certify your website"
+msgstr ""
+
+#: hon/cert/templates/button-nav.html:8
+msgid "Contribute"
+msgstr ""
+
+#: hon/cert/templates/button-nav.html:11
+msgid "Download toolbar"
+msgstr ""
+
+#: hon/cert/templates/cert.html:4
+msgid "Health website certificate of compliance"
+msgstr ""
+
+#: hon/cert/templates/cert.html:10
+msgid "Certificate of compliance"
+msgstr ""
+
+#: hon/cert/templates/cert.html:11
+msgid "with the Code of Conduct HONcode for health online information"
+msgstr ""
+
+#: hon/cert/templates/cert.html:25
+msgid "is in compliance with the HONcode"
+msgstr ""
+
+#: hon/cert/templates/cert.html:27
+msgid "is currently not checked for compliance with the HONcode"
+msgstr ""
+
+#: hon/cert/templates/cert.html:32 hon/cert/templates/cert.html.py:57
+msgid "Validity of certificate"
+msgstr ""
+
+#: hon/cert/templates/cert.html:49
+msgid "HONcode PIN number"
+msgstr ""
+
+#: hon/cert/templates/cert.html:51
+msgid "Date of initial review"
+msgstr ""
+
+#: hon/cert/templates/cert.html:53
+msgid "Date of last visit"
+msgstr ""
+
+#: hon/cert/templates/cert.html:56
+msgid "systematic reevaluation by HON every year"
+msgstr ""
+
+#: hon/cert/templates/cert.html:59
+msgid "Show the HONcode seal on this site"
+msgstr ""
+
+#: hon/cert/templates/cert.html:65
+msgid ""
+"You will find below the elements identified by the HONcode team\n"
+"                at a precise date to justify the <b>respect of the 8 ethical "
+"principles</b>."
+msgstr ""
+
+#: hon/cert/templates/cert.html:84
+msgid "Link"
+msgstr ""
+
+#: hon/cert/templates/cert.html:93
+msgid ""
+"The content of this certificate has been collected and written by the\n"
+"                Health On the Net Foundation (HON) and should not be used "
+"without previous permission granted by HON.<br>\n"
+"                A request for permission can be sent to:"
+msgstr ""
+
+#: hon/cert/templates/cert.html:101
+msgid "Report a complaint"
+msgstr ""
+
+#: hon/cert/templates/cert.html:107
+msgid "More information"
+msgstr ""
+
+#: hon/cert/templates/certify.html:3 hon/cert/templates/certify.html.py:6
+msgid "Apply for certificate of compliance"
+msgstr ""
+
+#: hon/cert/templates/certify.html:10
+msgid "Submit application"
+msgstr ""
+
+#: hon/cert/templates/registration/activate.html:3
+#: hon/cert/templates/registration/activation_complete.html:3
+msgid "Activation complete"
+msgstr ""
+
+#: hon/cert/templates/registration/activate.html:3
+msgid "Activation problem"
+msgstr ""
+
+#: hon/cert/templates/registration/activate.html:8
+#, python-format
+msgid ""
+"\n"
+"Thanks %(account)s, activation complete!\n"
+"You may now <a href='%(auth_login_url)s'>login</a> using the username and "
+"password you set at registration.\n"
+msgstr ""
+
+#: hon/cert/templates/registration/activate.html:13
+msgid ""
+"Oops &ndash; it seems that your activation key is invalid.  Please check the "
+"url again."
+msgstr ""
+
+#: hon/cert/templates/registration/activation_complete.html:6
+#, python-format
+msgid ""
+"\n"
+"Thanks, activation complete! You may now <a href='%(auth_login_url)s'>login</"
+"a> using the username and password you set at registration.\n"
+msgstr ""
+
+#: hon/cert/templates/registration/activation_email.html:8
+#, python-format
+msgid ""
+"<body>\n"
+"<h3>Account registration for %(sitename)s</h3>\n"
+"<p>You (or someone pretending to be you) have asked to register an account "
+"at\n"
+"    <b>%(sitename)s</b>.<br>\n"
+"    If this wasn't you, please ignore this email and your address will be "
+"removed\n"
+"    from our records.\n"
+"<p>To activate this account, please click the following link within the "
+"next \n"
+"    <b>%(expiration_days)s</b> days:<br>\n"
+"    <a href=\"http://%(sitedomain)s%(activation_key_url)s\">http://"
+"%(sitedomain)s%(activation_key_url)s</a>\n"
+"<p>Sincerely,<br>\n"
+"    %(sitename)s Team\n"
+"</body>\n"
+msgstr ""
+
+#: hon/cert/templates/registration/activation_email.txt:3
+#, python-format
+msgid ""
+"\n"
+"You (or someone pretending to be you) have asked to register an account at\n"
+"%(sitename)s.  If this wasn't you, please ignore this email\n"
+"and your address will be removed from our records.\n"
+"\n"
+"To activate this account, please click the following link within the next \n"
+"%(expiration_days)s days:\n"
+"\n"
+"http://%(siteurl)s%(activation_key_url)s\n"
+"\n"
+"Sincerely,\n"
+"%(sitename)s Team\n"
+msgstr ""
+
+#: hon/cert/templates/registration/activation_email_subject.txt:1
+#, python-format
+msgid "Account registration for %(sitename)s"
+msgstr ""
+
+#: hon/cert/templates/registration/login.html:3
+#: hon/cert/templates/registration/login.html:14
+msgid "Sign-in"
+msgstr ""
+
+#: hon/cert/templates/registration/login.html:9
+msgid "Your username and password didn't match. Please try again."
+msgstr ""
+
+#: hon/cert/templates/registration/login.html:16
+msgid "Forgot your password?"
+msgstr ""
+
+#: hon/cert/templates/registration/login.html:17
+msgid "Need an account?"
+msgstr ""
+
+#: hon/cert/templates/registration/logout.html:3
+msgid "Logged out"
+msgstr ""
+
+#: hon/cert/templates/registration/logout.html:5
+msgid "Successfully logged out!"
+msgstr ""
+
+#: hon/cert/templates/registration/password_change_done.html:3
+msgid "Password changed"
+msgstr ""
+
+#: hon/cert/templates/registration/password_change_done.html:5
+msgid "Password successfully changed!"
+msgstr ""
+
+#: hon/cert/templates/registration/password_change_form.html:3
+#: hon/cert/templates/registration/password_change_form.html:7
+msgid "Change password"
+msgstr ""
+
+#: hon/cert/templates/registration/password_reset_complete.html:3
+msgid "Password reset complete"
+msgstr ""
+
+#: hon/cert/templates/registration/password_reset_complete.html:4
+#, python-format
+msgid ""
+"\n"
+"Your password has been reset!  You may now <a href=\"%(login_url)s\">log in</"
+"a>.\n"
+msgstr ""
+
+#: hon/cert/templates/registration/password_reset_confirm.html:3
+msgid "Confirm password reset"
+msgstr ""
+
+#: hon/cert/templates/registration/password_reset_confirm.html:5
+msgid "Enter your new password below to reset your password:"
+msgstr ""
+
+#: hon/cert/templates/registration/password_reset_confirm.html:8
+msgid "Set password"
+msgstr ""
+
+#: hon/cert/templates/registration/password_reset_done.html:3
+msgid "Password reset"
+msgstr ""
+
+#: hon/cert/templates/registration/password_reset_done.html:5
+msgid ""
+"We have sent you an email with a link to reset your password.\n"
+"Please check your email and click the link to continue."
+msgstr ""
+
+#: hon/cert/templates/registration/password_reset_email.html:1
+msgid "Greetings"
+msgstr ""
+
+#: hon/cert/templates/registration/password_reset_email.html:3
+#, python-format
+msgid ""
+"You are receiving this email because you (or someone pretending to be you)\n"
+"requested that your password be reset on the %(domain)s site.  If you do "
+"not \n"
+"wish to reset your password, please ignore this message.\n"
+"\n"
+"To reset your password, please click the following link, or copy and paste "
+"it\n"
+"into your web browser:"
+msgstr ""
+
+#: hon/cert/templates/registration/password_reset_email.html:12
+#, python-format
+msgid ""
+"\n"
+"Your username, in case you've forgotten: %(username)s\n"
+"\n"
+"Best regards,\n"
+"%(site_name)s Team\n"
+msgstr ""
+
+#: hon/cert/templates/registration/password_reset_form.html:3
+#: hon/cert/templates/registration/password_reset_form.html:9
+msgid "Reset password"
+msgstr ""
+
+#: hon/cert/templates/registration/password_reset_form.html:5
+msgid ""
+"Forgot your password?  Enter your email in the form below and we'll send "
+"you\n"
+"instructions for creating a new one."
+msgstr ""
+
+#: hon/cert/templates/registration/registration_complete.html:3
+msgid "Activation email sent"
+msgstr ""
+
+#: hon/cert/templates/registration/registration_complete.html:5
+msgid ""
+"An activation email has been sent.\n"
+"Please check your email and click on the link to activate your account."
+msgstr ""
+
+#: hon/cert/templates/registration/registration_form.html:3
+msgid "Register for an account"
+msgstr ""
+
+#: hon/cert/templates/registration/registration_form.html:7
+msgid "Register and send activation email"
+msgstr ""
+
+#: hon/templates/404.html:3 hon/templates/404.html.py:7
+msgid "Page not found"
+msgstr ""
+
+#: hon/templates/404.html:8 hon/templates/500.html:10
+msgid "Continue to <a href=\"/en/\">homepage</a>."
+msgstr ""
+
+#: hon/templates/500.html:3 hon/templates/500.html.py:8
+msgid "There was an error."
+msgstr ""
+
+#: hon/templates/500.html:7
+msgid "Aww, snap"
+msgstr ""
+
+#: hon/templates/500.html:9
+msgid ""
+"We received an email with a complete report, so we can look into the problem."
+msgstr ""
+
+#: hon/templates/base.html:5 hon/templates/base.html.py:80
+msgid "Foundation"
+msgstr ""
+
+#: hon/templates/base.html:24
+msgid "Health information you can trust"
+msgstr ""
+
+#: hon/templates/base.html:27
+msgid ""
+"<b>Health on the Net</b><br>\n"
+"                      <i>Foundation</i>"
+msgstr ""
+
+#: hon/templates/base.html:36
+msgid "select language"
+msgstr ""
+
+#: hon/templates/base.html:50
+msgid "Search certified sites"
+msgstr ""

@@ -1,0 +1,146 @@
+- model: auth.user
+  pk: 1
+  fields:
+    username: admin
+    first_name: Célia
+    last_name: Boyer
+    is_active: true
+    is_superuser: true
+    is_staff: true
+    last_login: 1995-02-01T00:00:00+01:00
+    password: sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161
+    email: boyer@hon.ch
+    date_joined: 1995-02-01T00:00:00+01:00
+- model: auth.user
+  pk: 2
+  fields:
+    username: medicinedict
+    first_name: Franck
+    last_name: Malina
+    is_active: true
+    is_superuser: false
+    is_staff: false
+    last_login: 2014-07-14T07:00:00+01:00
+    password: sha1$6efc0$f93efe9fd7542f25a7be94871ea45aa95de57161
+    email: hello@medicinedict.com
+    date_joined: 2014-07-14T07:00:00+01:00
+
+
+- model: cert.cert
+  pk: 836479
+  fields:
+    name: Medicine Dictionary
+    link: http://medicinedict.com
+    owner: 2
+    editor: 1
+    compliant: True
+    date_valid_from:  2013-07-28
+    date_valid_until: 2015-07-28
+    date_init_review: 2013-07-14
+    date_last_visit:  2014-09-25
+
+- model: cert.proof
+  pk: 1
+  fields:
+    princip: 1
+    cert: 836479
+    desc: >
+        About
+        Website development, hosting and marketing is provided privately by its principal author and developer Franck Malina.
+        Franck is information systems architect, web and data developer, not a medical professional.
+    date: 2013-07-28
+    link: http://medicinedict.com
+
+- model: cert.proof
+  pk: 2
+  fields:
+    princip: 2
+    cert: 836479
+    desc: >
+        Unless you are a medical professional, please bear in mind information provided on the site is meant
+        to complement and not replace any advice or information from a health professional.
+    date: 2013-07-16
+    link: http://medicinedict.com
+
+- model: cert.proof
+  pk: 3
+  fields:
+    princip: 3
+    cert: 836479
+    desc: >
+        Privacy and cookies
+        This website does not use cookies or JavaScript to track users nor for any other purpose.
+        It never collects any of your personal information. If you email us, and please do,
+        with whatever query you might have, your contact information will be solely used
+        to communicate with you with regards to your query.
+    date: 2013-07-16
+    link: http://medicinedict.com
+
+- model: cert.proof
+  pk: 4
+  fields:
+    princip: 4
+    cert: 836479
+    desc: Last update 2nd of July 2013
+    date: 2013-07-16
+    link: http://medicinedict.com
+
+- model: cert.proof
+  pk: 5
+  fields:
+    princip: 5
+    cert: 836479
+    desc: >
+        Verapamil 160mg tablets 
+        Cordilox 160mg tablets (IVAX Pharmaceuticals UK Ltd) 56 tablet 4 x 14 tablets
+        Verapamil 160mg tablets (A A H Pharmaceuticals Ltd) 56 tablet 4 x 14 tablets
+        Verapamil 160mg tablets (Actavis UK Ltd) 56 tablet 4 x 14 tablets...
+    date: 2013-07-16
+    link: http://medicinedict.com/r/Verapamil
+
+- model: cert.proof
+  pk: 6
+  fields:
+    princip: 6
+    cert: 836479
+    desc: >
+        Email provided
+        Contact
+    date: 2013-07-16
+    link: http://medicinedict.com
+
+- model: cert.proof
+  pk: 7
+  fields:
+    princip: 7
+    cert: 836479
+    desc: Website development, hosting and marketing is funded privately by its principal author and developer...
+    date: 2013-07-16
+    link: http://medicinedict.com
+
+- model: cert.proof
+  pk: 8
+  fields:
+    princip: 8
+    cert: 836479
+    desc: advertisement
+    date: 2013-07-28
+    link: http://medicinedict.com
+
+- model: cert.proof
+  pk: 9
+  fields:
+    princip: 8
+    cert: 836479
+    desc: Content of the site is not influenced by advertisers.
+    date: 2013-07-28
+    link: http://medicinedict.com
+
+- model: cert.proof
+  pk: 10
+  fields:
+    princip: 8
+    cert: 836479
+    desc: Website displays relevant, on topic advertising, clearly separated from the content and clearly marked as an advert.
+    date: 2013-07-16
+    link: http://medicinedict.com

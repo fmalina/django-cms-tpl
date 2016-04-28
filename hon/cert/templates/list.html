@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="colorbar">
+    <div class="container">
+        <h1>{{ title }}</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="sidenav col-md-3">
+            {% include 'button-nav.html' %}
+            <ul class="nav">
+            {% for cat in tree %}
+                <li><a href="{% url 'category' cat.slug %}">{{ cat.name }}</a>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-9 col-sm-9 lift-colorbar">
+            <div class="row">
+            {% for cert in ls %}
+              <div class="col-sm-6">
+                <div class="thumbnail">
+                  <!--img src="{#% url 'thumb' cert.link %#}" alt="{{ c.link }}"-->
+                  <div class="caption">
+                    <p><b>{{ cert.name }}</b><br>
+                        <small class="text-muted">{{ cert.link }}</small></p>
+                    <p> <a href="{{ cert.get_absolute_url }}" class="btn btn-primary" role="button">
+                            View certificate</a>
+                        <a href="{{ cert.link }}" class="btn btn-default" role="button" target="_blank">
+                            View site <i class="glyphicon glyphicon-share"></i></a></p>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+            </div><!--/rows of certificate listings -->
+            
+            <div class="pagination">
+                <span class="step-links">
+                    {% if ls.has_previous %}
+                        <a href="?page={{ ls.previous_page_number }}">previous</a>
+                    {% endif %}
+                    
+                    <span class="current text-muted">
+                        Page {{ ls.number }} of {{ ls.paginator.num_pages }}
+                    </span>
+                    
+                    {% if ls.has_next %}
+                        <a href="?page={{ ls.next_page_number }}">next</a>
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+    </div><!--/row for sidebar and main column -->
+</div>
+{% endblock %}

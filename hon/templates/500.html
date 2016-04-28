@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "There was an error." %}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>{% trans "Aww, snap" %}</h1>
+        <p>{% trans "There was an error." %}
+            {% trans "We received an email with a complete report, so we can look into the problem." %}
+        <p>{% blocktrans %}Continue to <a href="/en/">homepage</a>.{% endblocktrans %}
+    </div>
+{% endblock %}

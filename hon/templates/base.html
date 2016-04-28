@@ -1,0 +1,92 @@
+{% load i18n cms_tags staticfiles sekizai_tags menu_tags %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}HON{% endblock title %} - HON {% trans "Foundation" %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% render_block "css" %}
+    <link rel="stylesheet" href="/static/hon-style.css">
+    <!-- IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    {% cms_toolbar %}
+    
+    <header>
+      <div class="navbar-static-top">
+        <div class="container">  
+          <div class="navbar-header">
+              <a class="logo navbar-brand" href="/"
+                  data-toggle="tooltip" data-placement="right"
+                  title="{% trans "Health information you can trust" %}">
+                  <div class="logo-abbr">HON</div>
+                  <div class="logo-long">
+                      {% blocktrans %}<b>Health on the Net</b><br>
+                      <i>Foundation</i>{% endblocktrans %}
+                  </div>
+                  <img src="/static/img/HON-symbol2.png" alt="" width="65">
+              </a>
+          </div>
+          <div class="navbar-right">
+              <ul class="nav navbar-nav">
+                  <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="{% trans "select language" %}">
+                          <span class="glyphicon glyphicon-globe"></span>
+                          <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu" role="menu">
+                      {% language_chooser %}
+                      </ul>
+                  </li>
+              </ul>
+              
+              <form class="navbar-form navbar-right" role="search"
+                  action="/HONcode/Search/search.html">
+                  <div class="input-group">
+                      <input type="text" name="q" class="form-control"
+                          placeholder="{% trans "Search certified sites" %}">
+                      <span class="input-group-btn">
+                          <button class="btn btn-default" type="submit" name="sa">
+                              <span class="glyphicon glyphicon-search"></span>
+                          </button>
+                      </span>
+                  </div>
+                  <input type="hidden" name="cref" value="/CSE/HONCODE/contextlink.xml">
+                  <input type="hidden" name="hl" value="en">
+                  <input type="hidden" name="cof" value="FORID:11">
+              </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    {% block content-wrapper %}
+          {% block content %}{% endblock %}
+    {% endblock %}
+    
+    <footer>
+    <hr>
+    <div class="container">
+        <ul class="nav nav-pills pull-left">
+            {% show_menu 0 0 0 0 "menu.html" %}
+            <li><a href="https://twitter.com/HealthOnTheNet">
+                <img src="/static/img/icon-twitter.png" alt="Twitter"></a>
+            <li><a href="https://www.facebook.com/HealthOntheNetFoundation">
+                <img src="/static/img/icon-fb.png" alt="Facebook"></a>
+        </ul>
+        <p class="copy text-muted pull-right">&copy; HON {% trans "Foundation" %} 1995&mdash;{% now "Y" %}<br>
+            <small>design: <a href="http://medicinedict.com" title="F. Malina">Medicine Dictionary</a></small></p>
+    </div>
+    </footer>
+    
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>$(function(){ $('.navbar-brand').tooltip(); });</script>
+    {% render_block "js" %}
+    {% block js %}{% endblock %}
+  </body>
+</html>
+
