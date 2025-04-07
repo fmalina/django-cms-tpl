@@ -1,8 +1,7 @@
-Redesigning Health on the Net
+Django CMS template
 =============================
-Redesign proposal for Health on the Net Foundation http://hon.ch
-
-Powered by good old swiss Django CMS and a custom certification app prototype.
+Powered by Django CMS and a custom certification app prototype.
+Originally proposed for the now defunct Health on the Net Foundation.
 
 Pointers
 --------
@@ -141,7 +140,7 @@ tested with: regexpal.com
 
 Tests
 -----
-Legacy site:
+Legacy site (test redirects):
 
 	/HONcode/
 	/OESO/
